@@ -1,6 +1,8 @@
-a = open('24_223.txt').readline().replace('TIK','TOK')
-k = m = 0
-for i in range(len(a)):
-    if (a[i:i+3]) == 'TOK': 
-        k += 1
-print(k)
+a = open('24_2507.txt').readlines()
+m = max(i.count('Q') for i in a)
+for i in a:
+    if i.count('Q') == m:
+        l = {x:i.count(x) for x in sorted(set(i.rstrip()))}
+        print(min(l.values()))
+        print(l)
+print(sum(i.count('C') for i in a))
