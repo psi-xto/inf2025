@@ -26,3 +26,10 @@ for i in permutations('ДЕЙКСТРА', r=6):
     if s.count('Й')==1 and s.index("Й")!=5 and s[s.index("Й")+1] in 'ДКСТР':
         c += 1
 print(c)
+
+# составляет слова, меняя местами буквы в слове
+import itertools
+c = 0
+for i in set(itertools.permutations('МИМИКРИЯ',r=8)):
+    c += 1
+print(c)
