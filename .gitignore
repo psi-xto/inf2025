@@ -4,3 +4,5 @@
 python
 test.py
 *.txt
+*.xls
+*.xlsx
