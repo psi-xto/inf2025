@@ -1,8 +1,9 @@
 def div(h):
-    divs = []
-    for i in range(2,h//2+1):
+    divs = set()
+    for i in range(2,int(h**0.5)+1):
         if h%i==0:
-            divs.append(h//i)
+            divs.add(h//i)
+            divs.add(h%i)
     return sorted(divs)
 for i in range(800001, 1000001):
     a = div(i)
