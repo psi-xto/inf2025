@@ -1,6 +1,6 @@
 m = 0
 a = (
-    open("24_17641.txt")
+    open("../24_17641.txt")
     .readline()
     .replace("++", "!")
     .replace("*+", "!")

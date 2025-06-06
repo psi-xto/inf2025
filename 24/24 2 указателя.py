@@ -42,3 +42,18 @@ for right in range(1, len(l)):
     if k == 21:
         m = max(m, right - left + 1)
 print(m)
+
+a = open("24_9169.txt").readline()
+k = 0
+m = 10**9
+l = 0
+
+for r in range(2, len(a)):
+    if a[r - 2 : r + 1] in ("BAD", "FAT"):
+        k += 1
+    while k == 3:
+        m = min(m, r - l + 1)
+        if a[l : l + 3] in ("BAD", "FAT"):
+            k -= 1
+        l += 1
+print(m)

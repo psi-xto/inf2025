@@ -10,7 +10,6 @@ while data:
     cl = [data.pop()]
     for p in cl:
         sosed = [p1 for p1 in data if dist(p, p1) < 2.9]
-        cl = cl + sosed
         for p1 in sosed:
             cl.append(p1)
             data.remove(p1)
