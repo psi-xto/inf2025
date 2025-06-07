@@ -1,6 +1,6 @@
 m = 0
 a = (
-    open("../24_17641.txt")
+    open("../9.txt")
     .readline()
     .replace("++", "!")
     .replace("*+", "!")
@@ -18,4 +18,6 @@ for c in a.split("!"):
                     substring += c[j]
                     if substring[-1] not in "+*" and eval(substring) == 0:
                         m = max(m, len(substring))
+                        if len(substring) == 169:
+                            print(substring)
 print(m)
